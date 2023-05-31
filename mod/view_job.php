@@ -105,20 +105,20 @@
 <div class="home_gt">
     <h3 style="text-align: center; margin: -2px 0 10px 0;"> Nộp Nhiệm Vụ <i class="fa-solid fa-caret-down" style="margin-left: 8px; font-size: 24px;"></i> </h3>
     <form method="post" enctype="multipart/form-data">
-        <ol style="padding: 0 5px 0 25px;">
+        <ol style="padding: 0 5px 0 20px;">
             <?php if( ($loai_ndd1 == 1) or ($loai_ndd1 == 3) ) {?>
             <!-- Nhiệm vụ SEO có code và không code -->
             <li>
                 <p> Link bạn truy cập website lần đầu và bài viết thứ 7 : </p>
-                <textarea maxlength="750" class="text_nv1" name="link1" placeholder="Link bài viết đầu tiên + link bài viết thứ 7 " required></textarea>
+                <textarea maxlength="850" class="text_nv1" name="link1" placeholder="Link đầu tiên + link post thứ 7 " required></textarea>
             </li>
             <li>
-                <p> Link và đoạn cuối cùng của bài viết thứ 10 : </p>
-                <textarea maxlength="1000" class="text_nv1" name="link10" placeholder="Link bài viết thứ 10 + đoạn cuối " required></textarea>
+                <p> Link quảng cáo bạn ấn vào từ website của chúng tôi : </p>
+                <textarea maxlength="850" class="text_nv1" name="link10" placeholder="Link quảng cáo (gclick/...) " required></textarea>
             </li>
             <li>
-                <p> Link quảng cáo ở website và 2 link trong quảng cáo : </p>
-                <textarea maxlength="1000" class="text_nv1" name="ads1" placeholder="1 link ads + 2 link khác trong ads " required></textarea>
+                <p> 1 link trong quảng cáo : </p>
+                <textarea maxlength="500" class="text_nv1" name="ads1" placeholder="Trang truy cập trong ADS" required></textarea>
             </li>
             <?php if( $loai_ndd1 ==3 ){ ?>
             <li>
@@ -168,7 +168,7 @@
 
                             <li>
                                 <p> Mã vận đơn : </p>
-                                <input  style="height: 20px;width: 98%; padding: 5px;" class="text_nv1" placeholder=" Nộp sau khi 'Đã nhận được hàng' " disabled>
+                                <input  style="height: 20px;width: 98%; padding: 5px;" class="text_nv1" placeholder=" Nộp sau khi 'Đã nhận được hàng. " disabled>
                             </li>
                             <?php
                         } elseif($rown_4v5 > 0) {
@@ -178,7 +178,7 @@
                             ?> 
                             <li>
                                 <p> Mã vận đơn : </p>
-                                <input  style="height: 20px;width: 98%; padding: 5px;" class="text_nv1" maxlength="50" name="mavandon" placeholder=" Nộp sau khi 'Đã nhận được hàng' " required>
+                                <input  style="height: 20px;width: 98%; padding: 5px;" class="text_nv1" maxlength="50" name="mavandon" placeholder=" Nộp sau khi 'Đã nhận được hàng. " required>
                             </li>
                             <?php
                         }
@@ -189,7 +189,7 @@
             } elseif ($loai_ndd1 == 4) {
                 ?> 
                     <li>
-                        <p> Username + mật khẩu(nếu cần) mà bạn đã đăng kí : </p>
+                        <p> Username ( + mật khẩu ) mà bạn đã đăng kí : </p>
                         <textarea type="text" maxlength="250" style="width: 98%; padding: 5px; font-weight: 450;" class="text_nv1" name="us_dk" placeholder="Tài khoản / mật khẩu / username" required></textarea>
                     </li>
 

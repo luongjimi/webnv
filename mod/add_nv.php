@@ -57,10 +57,10 @@
                                 </li>
 
                                 <li class="code_nv1" id="3">
-                                    <a style="margin: 5px; font-size: 16px;"> Code để SEO </a> <i class="fa-solid fa-caret-down" style="padding: 0 5px;"></i>
-                                    <input type="text" name="code_nv" style=" width: 98%; margin-top: 8px; padding:5px; font-size: 16px;" maxlength="50" placeholder="CODE" >  
+                                    <a style="margin: 5px; font-size: 16px;"> Link trang web </a> <i class="fa-solid fa-caret-down" style="padding: 0 5px;"></i>
+                                    <input type="text" name="code_nv" style=" width: 98%; margin-top: 8px; padding:5px;font-weight: 450; font-size: 16px;" maxlength="50" placeholder="example.com" >  
                                 </li>
-                                             
+                                
                             </ul>
                             <hr>        
                             <h4 style="color: red; font-weight: 750; margin: 0; text-align:center;"> TỔNG PHẢI THANH TOÁN : <em id="gia2"> 37500 </em></h4>

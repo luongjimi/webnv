@@ -32,7 +32,7 @@
         <th> Tên nhiệm vụ </th>
         <th> Hết hạn lúc </th>
         <th> Chờ nhận được </th>
-      </tr>
+      </tr> 
          <?php 
          // phan trang
          $slbd = 10; // so luong bai dang moi trang

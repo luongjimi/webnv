@@ -22,7 +22,7 @@
    <a href="index.php?act=reg" style="text-align: left; font-size: 14px; " > Đăng kí </a>
    
 </form>
-   
+   <br>
 <?php 
 if (isset($_POST['login'])) {
    $tk = htmlspecialchars($_POST['email']);

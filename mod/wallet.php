@@ -1,13 +1,17 @@
 <div class="home_gt">
     <div class="main_wallet">
         <i class="fa-regular fa-credit-card"></i>
-        <h3> Main: <?php echo number_format($countid['money'], 0, '', ','); ?> VND </h3>
-        <h5> Pending: <?php echo number_format($countid['re_money'], 0, '', ','); ?> VND </h5> 
+        <h3> Main:
+            <?php echo number_format($countid['money'], 0, '', ','); ?> VND
+        </h3>
+        <h5> Pending:
+            <?php echo number_format($countid['re_money'], 0, '', ','); ?> VND
+        </h5>
     </div>
     <hr>
-    <div class="main_wl2" >
-        <a id="nap"  onclick="openForm3()"> Nạp <i class="fa-solid fa-arrow-right-to-bracket"></i> </a>
-        <a id="rut"  onclick="openForm4()"> Rút <i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+    <div class="main_wl2">
+        <a id="nap" onclick="openForm3()"> Nạp <i class="fa-solid fa-arrow-right-to-bracket"></i> </a>
+        <a id="rut" onclick="openForm4()"> Rút <i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
     </div>
 </div>
 
@@ -18,48 +22,57 @@
         <h3 style="text-align: center; margin-bottom: 0;"> Nạp Tiền </h3>
         <form class="form_nap" method="post" enctype="application/x-www-form-urlencoded">
             <div>
-                <h4 style=" margin: -4px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Số tiền muốn nạp : </h4>
+                <h4 style=" margin: -4px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Số tiền muốn nạp :
+                </h4>
                 <select name="so_tien" style="height: 28px; width: 100%;" required>
                     <option value="200000"> 200,000 VND </option>
                     <option value="500000"> 500,000 VND </option>
                     <option value="2000000"> 2,000,000 VND </option>
                 </select>
             </div>
-        <div>
-            <h4 style=" margin: -4px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Chọn cổng nạp : </h4>
-            <select name="bank" id="name" style="height: 28px; width: 100%; " required>
-                <option value="1"> MB Bank </option>
-                <option value="2"> Kucoin </option>
-            </select>
-        </div>    
-
-        <div id="1" class="data_nap">
-            <div style="display: flex; justify-content: center;">
-                <img src="img/mb.png" width="70px" height="70px">
+            <div>
+                <h4 style=" margin: -4px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Chọn cổng nạp :
+                </h4>
+                <select name="bank" id="name" style="height: 28px; width: 100%; " required>
+                    <option value="1"> MB Bank </option>
+                    <option value="2"> Kucoin </option>
+                </select>
             </div>
-            <ul class="tt_bank" >
-                <h3 style="margin: 5px ;"> Thông tin chuyển khoản : </h3>
-                <li> Số tài khoản : 066666999969 </li>
-                <li> Người nhận : TRAN THE ANH </li>
-                <li> Ghi chú : User<?php echo $tk2; ?> </li>
-            </ul>
-        </div>
 
-        <div id="2" class="data_nap">
-            <div style="display: flex; justify-content: center;">
-                <img src="img/kucoin.png" width="70px" height="70px">
+            <div id="1" class="data_nap">
+                <div style="display: flex; justify-content: center;">
+                    <img src="img/mb.png" width="70px" height="70px">
+                </div>
+                <ul class="tt_bank">
+                    <h3 style="margin: 5px ;"> Thông tin chuyển khoản : </h3>
+                    <li> Số tài khoản : 066666999969 </li>
+                    <li> Người nhận : TRAN THE ANH </li>
+                    <li> Ghi chú : User
+                        <?php echo $tk2; ?>
+                    </li>
+                </ul>
             </div>
-            <ul class="tt_bank" >
-                <h3 style="margin: 14px 0 5px 0 ;"> Thông tin chuyển khoản : </h3>
-                <li> UID : 174545031 </li>
-                <li> Ghi chú : User<?php echo $tk2; ?> </li>
-                <li> Hoặc = <a style="font-size: 12px;"> USDT(KCC):  0x725c8cc7afddeb55c6ced510416f080f1085a8b6 </a> </li>
-            </ul>
-        </div>
 
-        <h6 style="margin: 5px;"> *Chúng tôi sẽ sử lí yêu cầu trong vòng vài giờ. </h6>
-        
-            <input name="nap_tien" style="font-size: 16px; height: 32px; cursor: pointer; background-color:#04AA6D; color: white;" type="submit" value="Nạp tiền">
+            <div id="2" class="data_nap">
+                <div style="display: flex; justify-content: center;">
+                    <img src="img/kucoin.png" width="70px" height="70px">
+                </div>
+                <ul class="tt_bank">
+                    <h3 style="margin: 14px 0 5px 0 ;"> Thông tin chuyển khoản : </h3>
+                    <li> UID : 174545031 </li>
+                    <li> Ghi chú : User
+                        <?php echo $tk2; ?>
+                    </li>
+                    <li> Hoặc = <a style="font-size: 12px;"> USDT(KCC): 0x725c8cc7afddeb55c6ced510416f080f1085a8b6 </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h6 style="margin: 5px;"> *Chúng tôi sẽ sử lí yêu cầu trong vòng vài giờ. </h6>
+
+            <input name="nap_tien"
+                style="font-size: 16px; height: 32px; cursor: pointer; background-color:#04AA6D; color: white;"
+                type="submit" value="Nạp tiền">
         </form>
         <br>
     </div>
@@ -70,46 +83,53 @@
         <a onclick="closeForm4()" style="cursor: pointer; font-size: 24px; margin-left: 10px;"> x </a>
         <hr>
         <h3 style="text-align: center; margin-bottom: 0;"> Rút Tiền </h3>
-        
+
         <form class="form_nap" method="post" enctype="application/x-www-form-urlencoded">
             <div>
-                <h4 style=" margin: 0px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Số tiền muốn rút : </h4>
+                <h4 style=" margin: 0px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Số tiền muốn rút :
+                </h4>
                 <select name="rut_bn" style="height: 28px; width: 100%;" required>
                     <option value="100000"> 100,000 VND </option>
                     <option value="200000"> 200,000 VND </option>
                     <option value="500000"> 500,000 VND </option>
-                </select> 
-            </div> 
+                </select>
+            </div>
 
             <div>
-                <h4 style=" margin: -3px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Chọn cổng rút : </h4>
+                <h4 style=" margin: -3px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Chọn cổng rút :
+                </h4>
                 <select name="rut_ve" style="height: 28px; width: 100%; " required>
                     <option value="3"> Internet Banking </option>
                     <option value="4"> USDT </option>
                 </select>
-            </div>   
+            </div>
 
             <div>
-                <h4 style=" margin: -3px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Thông tin thanh toán : </h4>
-                <textarea maxlength="250" name="tt_rut" style="width: 99%; color: green; font-size: 14px;height: 68px;" placeholder="Thông tin ngân hàng hoặc địa chỉ ví USDT " ></textarea>
+                <h4 style=" margin: -3px 5px 6px 5px ; display: flex; justify-content: flex-start ;"> Thông tin thanh
+                    toán : </h4>
+                <textarea maxlength="250" name="tt_rut" style="width: 99%; color: green; font-size: 14px;height: 68px;"
+                    placeholder="Thông tin ngân hàng hoặc địa chỉ ví USDT "></textarea>
             </div>
 
             <div style="width: 100%; margin-top: -8px;">
-                <p style="display: flex; justify-content: flex-start ; font-size: 16px; margin: 5px ;"> Nhập mã gửi đến email : </p>
+                <p style="display: flex; justify-content: flex-start ; font-size: 16px; margin: 5px ;"> Nhập mã gửi đến
+                    email : </p>
                 <div class="code_btn">
-                    <input type="number"style="width: 76%; height: 28px;" placeholder="Code" name="c_code">
+                    <input type="number" style="width: 76%; height: 28px;" placeholder="Code" name="c_code">
                     <input type="submit" name="code1" class="btn_log" style="width: 20%;height: 28px;" value="Gửi mã">
-                </div>  
+                </div>
             </div>
-        
-            
-        <h6 style="margin: 5px;"> *Chúng tôi sẽ sử lí yêu cầu trong vòng vài ngày. </h6>
-        
-            <input name="rut_tien" style="font-size: 16px; height: 32px; cursor: pointer; background-color: red; color: white;" type="submit" value="Rút tiền">
+
+
+            <h6 style="margin: 5px;"> *Chúng tôi sẽ sử lí yêu cầu trong vòng vài ngày. </h6>
+
+            <input name="rut_tien"
+                style="font-size: 16px; height: 32px; cursor: pointer; background-color: red; color: white;"
+                type="submit" value="Rút tiền">
         </form>
         <br>
     </div>
-    
+
 </div>
 
 <?php
@@ -128,7 +148,9 @@ $row_rut12 = mysqli_num_rows($ktra21);
         if( isset($_POST['code1']) ){
         
             if($time_con > 0 ){
-                ?> <script> alert("Code chưa hết hạn"); </script> <?php
+                ?>
+<script> alert("Code chưa hết hạn"); </script>
+<?php
             } else {
                 $code_ran =  rand(100000,999999);
 
@@ -161,9 +183,13 @@ $row_rut12 = mysqli_num_rows($ktra21);
                       $mail->AddAddress($tk);
                   
                        if(!$mail->Send()) {
-                        ?> <script> alert("Thất bại"); </script> <?php
+                        ?>
+<script> alert("Thất bại"); </script>
+<?php
                        } else {
-                        ?> <script> alert("Code đã được gửi đến email <?php echo $tk; ?>"); </script> <?php
+                        ?>
+<script> alert("Code đã được gửi đến email <?php echo $tk; ?>"); </script>
+<?php
                        }
                     } 
             }
@@ -176,9 +202,13 @@ $row_rut12 = mysqli_num_rows($ktra21);
                 $code1 = htmlspecialchars($_POST['c_code']);
                 $codedb = $countid['code'];
                 if (!is_numeric($code1) and (strlen($code1) < 6) ) {
-                    ?> <script> alert("Sai code"); </script> <?php
+                    ?>
+<script> alert("Sai code"); </script>
+<?php
                 } elseif($time_con < 0 ){
-                    ?> <script> alert("Code đã hết hạn"); </script> <?php
+                    ?>
+<script> alert("Code đã hết hạn"); </script>
+<?php
                 } elseif($codedb === $code1 ) {
                     $so_tien = $_POST['rut_bn'];
                     $tru_mv231 = $countid['money'] - $so_tien;
@@ -196,23 +226,33 @@ $row_rut12 = mysqli_num_rows($ktra21);
                                 if(mysqli_query($conn, $sql_tru12)) {
                                     $sql1 = "INSERT INTO `rut_tien` (`of_us` , `money` , `dia_chi` , `t_gian` , `loai`, `rut_nap` ) VALUES ('$tk2' , '$so_tien', '$tt_tt_us12' , '$date10' , '$cong_nap', 1) ";
                                     if(mysqli_query($conn, $sql1)) {
-                                        ?> <script> alert("Tạo lệnh thành công"); </script> <?php
+                                        ?>
+<script> alert("Tạo lệnh thành công"); </script>
+<?php
                                     } 
                                 } 
                             } else {
-                                ?> <script> alert("Quá 3 lệnh giao dịch / ngày"); </script> <?php
+                                ?>
+<script> alert("Quá 3 lệnh giao dịch / ngày"); </script>
+<?php
                             }
                         }    
                     }else {
-                        ?> <script> alert("Không đủ tiền"); </script> <?php
+                        ?>
+<script> alert("Không đủ tiền"); </script>
+<?php
                     }
                     
                 } else {
-                    ?> <script> alert("Sai code"); </script> <?php
+                    ?>
+<script> alert("Sai code"); </script>
+<?php
                 }
 
             } else {
-                ?> <script> alert("Bạn chưa nhập code"); </script> <?php
+                ?>
+<script> alert("Bạn chưa nhập code"); </script>
+<?php
             }
         }   
 
@@ -223,10 +263,14 @@ $row_rut12 = mysqli_num_rows($ktra21);
             if($row_rut12 < 3){
                 $sql1 = "INSERT INTO `rut_tien` (`of_us` , `money` , `t_gian` , `loai`) VALUES ('$tk2' , '$so_tien' , '$date10' , '$cong_nap') ";
                 if(mysqli_query($conn, $sql1)) {
-                    ?> <script> alert("Tạo lệnh thành công"); </script> <?php
+                    ?>
+<script> alert("Tạo lệnh thành công"); </script>
+<?php
                 } 
             } else {
-                ?> <script> alert("Quá 3 lệnh giao dịch / ngày"); </script> <?php
+                ?>
+<script> alert("Quá 3 lệnh giao dịch / ngày"); </script>
+<?php
             }
         }
 
@@ -235,41 +279,46 @@ $row_rut12 = mysqli_num_rows($ktra21);
 
 
 <br>
-<div class="home_gt"  >
+<div class="home_gt">
     <div id="show_lsu123">
-    <?php 
+        <?php 
         $lsu_rut = mysqli_query($conn,"SELECT * FROM `rut_tien` WHERE of_us = '$tk2' ORDER BY `rut_tien`.`id_tt` DESC LIMIT 5 ");
         $slrut1 = mysqli_num_rows($lsu_rut);
 
         if($slrut1 > 0 ) {
         while($lsu_rut2 = mysqli_fetch_array($lsu_rut)) {
     ?>
-    <div class="ls_vitien">
-        <?php
+        <div class="ls_vitien">
+            <?php
             if ($lsu_rut2['duyet'] == 1) {
-                ?> <i class="fa-regular fa-circle-check"></i> <?php
+                ?> <i class="fa-regular fa-circle-check"></i>
+            <?php
             } elseif($lsu_rut2['duyet'] == 0) {
-                ?>  <i class="fa-solid fa-spinner"></i>  <?php
+                ?> <i class="fa-solid fa-spinner"></i>
+            <?php
             } else {
-                ?> <i class="fa-regular fa-circle-xmark"></i> <?php
+                ?> <i class="fa-regular fa-circle-xmark"></i>
+            <?php
             }
         ?>
-        <div class="nd_vitien"> <strong style="font-size: 16px; <?php
+            <div class="nd_vitien"> <strong style="font-size: 16px; <?php
             if($lsu_rut2['rut_nap'] == 0){
                 echo " color: green; " ;
              } else {
                 echo " color: red; " ;
              }
         ?>">
-            <?php 
+                    <?php 
                  if($lsu_rut2['rut_nap'] == 0){
                     echo " Nạp " ;
                  } else {
                     echo " Rút " ;
                  }
             ?>
-        : <?php echo $lsu_rut2['money'] ?>đ </strong> = 
-            <?php 
+                    :
+                    <?php echo $lsu_rut2['money'] ?>đ
+                </strong> =
+                <?php 
                 if($lsu_rut2['loai'] == 1){
                     echo " MB BANK ";
                 } elseif ($lsu_rut2['loai'] == 2) {
@@ -280,18 +329,21 @@ $row_rut12 = mysqli_num_rows($ktra21);
                     echo " USDT " ;
                 }
             ?>
-        <a class="a_time"> <?php echo $lsu_rut2['t_gian']; ?> </a> </div>
-    </div>
-    <br>
-    <?php } ?>
+                <a class="a_time">
+                    <?php echo $lsu_rut2['t_gian']; ?>
+                </a>
+            </div>
+        </div>
+        <br>
+        <?php } ?>
 
     </div>
-        <i id="xemthem_lsu" class="fa-solid fa-chevron-down"></i>
-        <!-- ajax wallet phan trang -->
+    <i id="xemthem_lsu" class="fa-solid fa-chevron-down"></i>
+    <!-- ajax wallet phan trang -->
     <?php } else {
-        ?> <h4 style="text-align: center; color: red;"> Lịch sử giao dịch trống ! </h4> <?php
+        ?>
+    <h4 style="text-align: center; color: red;"> Lịch sử giao dịch trống ! </h4>
+    <?php
     } ?>
 </div>
-<br>
-<br>
 <br>
